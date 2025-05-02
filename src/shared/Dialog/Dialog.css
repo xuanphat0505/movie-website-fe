@@ -1,0 +1,310 @@
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: theme("transition.fade");
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+}
+.dialog.show {
+  z-index: 1055;
+  opacity: 1;
+  pointer-events: auto;
+}
+.dialog.modal-xs .modal-dialog {
+  max-width: 300px;
+  width: 96%;
+  height: auto;
+}
+.dialog.modal-md .modal-dialog {
+  max-width: 600px;
+  width: 96%;
+  height: auto;
+}
+.dialog.modal-xs .modal-dialog .modal-content {
+  padding: 1.5rem;
+}
+.dialog .modal-dialog {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 96%;
+  max-width: 860px;
+  min-height: calc(100% - 1.75rem * 2);
+  margin: 28px auto;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-out;
+}
+
+.modal-form .modal-dialog {
+  max-width: 750px;
+  width: 96%;
+  margin: 10px auto;
+}
+.modal-form .modal-dialog .modal-content {
+  min-height: 400px;
+  padding: 3rem 3rem 3rem calc(360px + 3rem);
+  background-color: #1e2545;
+}
+.modal-form .modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://res.cloudinary.com/djmeybzjk/image/upload/v1745254440/form-image_nulba7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dialog .modal-dialog.modal-sm {
+  max-width: 480px;
+}
+.dialog .modal-dialog.modal-md {
+  max-width: 500px;
+}
+.dialog .modal-dialog.modal-lg {
+  max-width: 600px;
+}
+.dialog.show .modal-dialog {
+  transform: none;
+}
+.modal-dialog .modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  background-color: #242838!important;
+  border-radius: 0.75rem;
+  border: none;
+}
+
+.modal-content .close-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: theme("colors.white-color");
+}
+
+.modal-content .dialog-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 10px;
+  white-space: nowrap;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+.modal-content .dialog-item img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.modal-content .dialog-item:hover {
+  opacity: 0.8;
+  transform: translateY(-4px);
+}
+.modal-content .modal-body .rate-emo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-body .rate-emo .emo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+  padding: 1rem 0.4rem;
+  font-size: 13px;
+  border-radius: 0.75rem;
+  color: theme("colors.white-color");
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.modal-body .rate-emo .emo-item .emo {
+  width: 60px;
+  height: 60px;
+}
+.modal-body .rate-emo .emo-item:hover,
+.modal-body .rate-emo .emo-item.active {
+  filter: none;
+}
+.modal-body .rate-comment textarea.v-form-control {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: transparent;
+  border: 1px solid #ffffff10;
+}
+.modal-content .modal-footer .btn {
+  min-width: 80px;
+}
+
+/* form */
+.form-header {
+  margin-bottom: 1rem;
+}
+.form-w-icon i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+}
+.form-w-icon i svg {
+  width: auto !important;
+}
+.form-w-icon .v-form-control {
+  padding-left: 3rem;
+}
+p a {
+  color: theme("colors.primary-color");
+}
+p a:hover {
+  color: theme("colors.primary-color");
+}
+form .input-box input {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: theme("colors.white-color");
+  border: 1px solid #ffffff10;
+  transition: all 0.15s ease-in-out;
+}
+form .input-box input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+}
+.btn.d-block {
+  display: block;
+  width: 100%;
+}
+.is-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*  */
+.avatar-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 6px;
+}
+.avatar-list .avatar-item {
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.6;
+  box-shadow: 0 0 0 3px transparent;
+}
+.avatar-list .avatar-item.active {
+  opacity: 1;
+}
+.avatar-list .avatar-item.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid #fff;
+  z-index: 2;
+}
+.avatar-list .avatar-item img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+@media screen and (min-width: 990px) {
+  .modal-form .modal-dialog .modal-content {
+    padding: 4rem 4rem 4rem calc(420px + 4rem);
+  }
+  .modal-form .modal-dialog {
+    max-width: 860px;
+  }
+  .modal-form .modal-content::before {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .modal-form .modal-dialog {
+    max-width: 450px;
+  }
+  .modal-form .modal-dialog .modal-content {
+    padding: 2rem;
+    min-height: auto;
+  }
+  .modal-form .modal-dialog .modal-content::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modal-body .rate-emo {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    background-color: transparent !important;
+    padding: 0;
+  }
+  .modal-body .rate-emo .emo-item {
+    flex-direction: row;
+    border-radius: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .modal-body .rate-emo .emo-item .emo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal-dialog .modal-content {
+    padding: 1.5rem;
+  }
+  .modal-body .rate-emo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

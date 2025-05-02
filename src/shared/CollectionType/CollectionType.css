@@ -1,0 +1,18 @@
+.slide-button svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: #000;
+  position: relative;
+  right: -1px;
+}
+.movie-slide-wrapper {
+  width: calc(100% - 230px);
+  position: relative;
+}
+
+@media screen and (max-width: 1359px) {
+  .movie-slide-wrapper {
+    width: 100%;
+    position: relative;
+  }
+}

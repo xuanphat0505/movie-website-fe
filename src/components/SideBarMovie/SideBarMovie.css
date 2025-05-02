@@ -1,0 +1,114 @@
+.movie-sidebar {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 440px;
+  border-radius: 1.25rem 3rem 1.25rem 1.25rem;
+}
+.top-movie + .top-movie {
+  margin-top: 1rem;
+}
+.top-movie .position {
+  width: 60px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 4em;
+  font-weight: 800;
+  color: theme("colors.bg-color");
+  text-shadow:
+    -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
+}
+.top-content {
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  background-color: #ffffff05;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-content .tag-small {
+  display: inline;
+  font-size: 0.9em;
+  color: theme("colors.text-base");
+  white-space: nowrap;
+  margin-right: 0;
+  text-transform: capitalize;
+}
+.top-movie .tag-small + .tag-small {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.top-movie .tag-small + .tag-small::before {
+  position: absolute;
+  content: "";
+  left: -3px;
+  top: calc(50% - 3px);
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff30;
+  border-radius: 50%;
+}
+
+.detail-more {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1359px) {
+  .movie-sidebar {
+    padding: 30px;
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .movie-sidebar .side-info .v-thumb-1 {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .movie-sidebar {
+    padding: 0 !important;
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .movie-sidebar {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+  .movie-sidebar .side-info {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .movie-sidebar .side-info .v-thumb-1 {
+    width: 120px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  .movie-sidebar .side-info .alias-name {
+    display: none;
+  }
+  .movie-sidebar .side-info #toggle-detail {
+    display: inline-flex;
+    max-width: 300px;
+  }
+  .movie-sidebar .side-info .detail-more {
+    text-align: left;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.75rem;
+  }
+  .movie-sidebar .side-actor,
+  .movie-sidebar .side-top {
+    display: none;
+  }
+}

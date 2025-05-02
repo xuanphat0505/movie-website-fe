@@ -1,0 +1,231 @@
+.top-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+  background-color: theme("colors.top-bg-default");
+  overflow: hidden;
+}
+.top-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  z-index: 3;
+  background: #191b24;
+  background: linear-gradient(0deg, #191b24, rgba(25, 27, 36, 0));
+}
+
+.button-item {
+  min-width: 80px;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+}
+.button-item:hover {
+  background-color: #ffffff05;
+}
+.button-item a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  line-height: 1;
+  font-size: 0.9em;
+}
+
+.button-item a .icon-box {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.button-item a .icon-box svg {
+  width: 100%;
+  height: 100%;
+}
+.nav-link {
+  display: block;
+  margin-bottom: -1px;
+  padding: 0.75rem 0;
+  font-size: 1em;
+  font-weight: 500;
+  color: theme("colors.white-color");
+  opacity: 0.9;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease-in-out;
+}
+.nav-link.active {
+  opacity: 1;
+  color: theme("colors.primary-text");
+  border-color: theme("colors.primary-color") !important;
+  margin-bottom: -1px;
+}
+.nav-link + .nav-link {
+  margin-left: 40px;
+}
+.tab-element {
+  display: none;
+}
+.tab-element.show {
+  display: block;
+}
+.fade {
+  transition: theme("transition.fade");
+}
+
+
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 13px;
+  cursor: pointer;
+  color: theme("colors.white-color");
+  background-color: transparent;
+}
+.tag-item.active {
+  color: #000;
+  background-color: theme("colors.white-color");
+}
+
+.comment-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+.comment-item .comment-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: theme("colors.bg-color-2");
+  overflow: hidden;
+}
+.comment-list, .rate-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+} 
+.rated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  line-height: 1;
+  font-size: 12px;
+  border-radius: 2rem;
+  background-color: #3556b6;
+  color: theme("colors.white-color");
+}  
+
+@media screen and (max-width: 1599px) {
+  .detail-actors {
+    grid-template-columns: repeat(5, 1fr) !important;
+    column-gap: 0.6rem !important;
+    row-gap: 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .top-wrapper {
+    padding-bottom: 300px;
+    opacity: 0.5;
+  }
+  .detail-container {
+    flex-direction: column;
+    margin-top: -150px;
+  }
+  .detail-container .detail-main {
+    padding: 0;
+  }
+  .detail-container .detail-main .dm-bar {
+    padding: 20px;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .translation-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 799px) {
+  .detail-main .play-btn {
+    min-width: 300px;
+  }
+  .detail-main .movie-body .tab-list {
+    padding: 0 16px;
+    justify-content: center;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .nav-link + .nav-link {
+    margin-left: 2rem;
+  }
+  .detail-actors {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .tag-item {
+    font-size: 12px;
+    height: 26px;
+    padding: 0 .5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .detail-container {
+    padding: 0 16px;
+  }
+  .detail-main .movie-body .tab-list {
+    padding: 0;
+  }
+  .translation-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .detail-actors {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .detail-main .play-btn {
+    font-size: 16px;
+    padding: 0 1.4rem;
+    height: 50px;
+    min-height: auto;
+  }
+  .detail-main .movie-body .tab-list {
+    justify-content: flex-start;
+    min-width: 420px;
+  }
+  .detail-main .dm-bar {
+    padding: 1rem 0 !important;
+  }
+  .detail-main .dm-bar .touch-group {
+    margin: 0.5rem 0;
+    gap: 1.5rem;
+  }
+  .detail-main .dm-bar .touch-group .button-item {
+    min-width: auto;
+    padding: 0;
+  }
+  .nav-link + .nav-link {
+    margin-left: 1.5rem;
+  }
+  .nav-link {
+    font-size: 13px;
+  }
+}

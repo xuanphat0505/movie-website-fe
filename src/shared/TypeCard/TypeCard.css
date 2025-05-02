@@ -1,0 +1,101 @@
+.type-card {
+  position: relative;
+  top: 0;
+  padding: 1.2rem 2.5rem 1.2rem 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  justify-content: space-between;
+  background: radial-gradient(
+    at left top,
+    hsla(0, 0%, 100%, 0.8) 30%,
+    hsla(0, 100%, 72%, 0.79) 100%
+  );
+  transition: theme("transition.default");
+}
+.type-card .intro .heading-md {
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  line-height: 1.3;
+}
+.type-card.more-topic {
+  background: #ffffff10;
+  padding: 1rem;
+}
+.type-card .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mask-image: linear-gradient(180deg, #000 -10%, rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+.type-card:hover {
+  color: theme("colors.white-color");
+  top: -0.6rem;
+}
+@media screen and (max-width: 1900px) {
+  .type-card .intro {
+    min-height: 110px !important;
+  }
+  .type-card .intro .heading-md {
+    font-size: 1.6em;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .type-card.more-topic .intro {
+    min-height: auto !important;
+  }
+  .type-card.more-topic .intro .heading-md {
+    font-size: 1.1em !important;
+    line-height: 1.8 !important;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .type-card {
+    padding: 1.2rem !important;
+  }
+  .intro {
+    min-height: 100px;
+  }
+  .type-card .intro .heading-md {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 799px) {
+  .intro {
+    min-height: 80px;
+  }
+  .intro {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .type-card {
+    padding: 1rem !important;
+  }
+  .intro {
+    min-height: 50px !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+  .type-card.more-topic .intro {
+    align-items: center !important;
+  }
+  .type-card .intro .heading-md {
+    font-size: 1.2em;
+    line-height: 1.3;
+    flex-grow: unset;
+  }
+  .type-card.more-topic .intro .heading-md {
+    font-size: 0.8em !important;
+    line-height: 1.4 !important;
+  }
+  .info {
+    display: none !important;
+  }
+}
