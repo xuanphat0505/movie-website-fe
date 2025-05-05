@@ -89,13 +89,15 @@
   bottom: 212px;
 }
 .thumbs-wrapper .thumbs-slide {
+  position: relative;
   width: 71px !important;
   height: 45px;
   margin-right: 5px;
   cursor: pointer;
-  position: relative;
-  border: 3px solid transparent;
+  border: 2px solid #ffffff24;
+  border-radius: 0.5rem;
   transition: theme("transition.default");
+  transform: scale(0.95);
 }
 .thumbs-slide.swiper-slide-thumb-active,
 .thumbs-wrapper .thumbs-slide:hover {

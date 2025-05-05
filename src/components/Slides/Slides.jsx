@@ -169,7 +169,7 @@ function Slides({ movies }) {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = slide?.thumb_url;
                 }}
-                className="w-full h-full bg-bg-color-2"
+                className="w-full h-full bg-bg-color-2 rounded-lg"
               />
             </SwiperSlide>
           ))}

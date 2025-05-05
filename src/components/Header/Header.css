@@ -253,8 +253,6 @@ input#search-input:focus {
   .header-element {
     padding: 0 6px;
   }
-}
-@media screen and (max-width: 1359px) {
   .sub-menu .user-logged .user-dropdown > div,
   .sub-menu .user-logged .user-dropdown > a {
     color: theme("colors.white-color");
@@ -280,5 +278,8 @@ input#search-input:focus {
   .sub-menu.toggled {
     margin-top: 5px;
     left: 5px;
+  }
+  header {
+    background-color: theme("colors.footer-bg") !important;
   }
 }
