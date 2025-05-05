@@ -51,6 +51,7 @@ function MovieBox({ movie, type, removeButton, removeFavorite, playListName }) {
       await removeFromHistory(movie?.slug);
     }
   };
+  console.log(movie);
 
   return (
     <div className="w-full flex flex-col gap-3 relative ">
@@ -104,9 +105,14 @@ function MovieBox({ movie, type, removeButton, removeFavorite, playListName }) {
             </div>
           </>
         )}
-        <h4 className="text-center text-[1em] font-normal leading-[1.5] text-white-color line-clamp-1">
+        <h4 className={`${type === 1 ? "text-center" : ""} text-[1em] font-normal leading-[1.5] text-white-color line-clamp-1`}>
           <Link className="capitalize" to={`/movie/${movie?.slug}`}>
             {movie?.name}
+          </Link>
+        </h4>
+        <h4 className={`${type === 1 ? "text-center" : ""} text-[.9em] mt-[5px] line-clamp-1`}>
+          <Link className="capitalize text-text-base hover:text-text-base" to={`/movie/${movie?.slug}`}>
+            {movie?.origin_name}
           </Link>
         </h4>
       </div>

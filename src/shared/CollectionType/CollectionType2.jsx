@@ -57,7 +57,8 @@ function CollectionType2() {
   }
 
   return (
-    <div className="w-full h-auto flex flex-col gap-8 p-8 rounded-2xl bg-bg-color-2">
+    // <div className="w-full h-auto flex flex-col gap-8 p-8 rounded-2xl bg-bg-color-2">
+    <div className="movie-list">
       {collectionData.map((collection, index) => (
         <CollectionType1
           key={index}

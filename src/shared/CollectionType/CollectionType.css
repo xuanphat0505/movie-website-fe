@@ -9,7 +9,26 @@
   width: calc(100% - 230px);
   position: relative;
 }
+.movie-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: theme("colors.bg-color-2");
+}
 
+
+@media screen and (max-width: 640px) {
+  .movie-list {
+    padding: 1rem 0;
+    gap: 1rem;
+    border-radius: .6rem;
+    background-color: transparent;
+  }
+}
 @media screen and (max-width: 1359px) {
   .movie-slide-wrapper {
     width: 100%;
