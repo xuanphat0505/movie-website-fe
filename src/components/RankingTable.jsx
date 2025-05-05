@@ -12,10 +12,14 @@ import {
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import axios from "axios";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
 
 import { OpenContext } from "../contexts/OpenContext";
 import { CommentContext } from "../contexts/CommentContext";
+import axios from "axios";
 import { hotTypes } from "../assets/data/data";
 
 function RankingTable() {
@@ -23,6 +27,7 @@ function RankingTable() {
     useContext(OpenContext);
   const { newComments } = useContext(CommentContext);
   const [excitingMovies, setExcitingMovies] = useState([]);
+  const [swiperReady, setSwiperReady] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +43,12 @@ function RankingTable() {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (newComments.length > 0) {
+      setSwiperReady(true);
+    }
+  }, [newComments]);
 
   return (
     <div className="w-full h-auto ">
@@ -178,7 +189,9 @@ function RankingTable() {
                   className="flex items-center h-[28px] px-[.8rem] text-[13px] rounded-[30px] text-white-color"
                   style={{ background: type.color }}
                 >
-                  <Link className="capitalize hover:text-current">{type.type}</Link>
+                  <Link className="capitalize hover:text-current">
+                    {type.type}
+                  </Link>
                 </div>
               </div>
             ))}
@@ -198,50 +211,57 @@ function RankingTable() {
             <span>bình luận mới</span>
           </div>
           <div className="relative">
-            <Swiper
-              className="max-h-[282px]"
-              modules={[Autoplay]}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-              }}
-              direction="vertical"
-              slidesPerView={4}
-              spaceBetween={5}
-              loop={true}
-              speed={800}
-              observer={true}
-              observeParents={true}
-            >
-              {newComments.map((comment) => (
-                <SwiperSlide key={comment._id}>
-                  <div className="w-full h-full relative block">
-                    <Link className="comment-box relative">
-                      <div className="user-avatar">
-                        <img src={comment?.userId?.avatar} alt=""></img>
-                      </div>
-                      <div className="comment text-[12px] line-clamp-1">
-                        <span className="text-white-color font-medium">
-                          {comment?.userId?.username}{" "}
-                        </span>
-                        {comment?.content}
-                      </div>
-                      <div className="comment-movie inline-flex items-center gap-1  text-[12px] leading-[1.5] text-[#fff5]">
-                        <small>
-                          <i>
-                            <FaPlay size={8} className="text-primary-color" />
-                          </i>
-                        </small>
-                        <span className="line-clamp-1 capitalize">
-                          {comment?.movieName}
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            {swiperReady && (
+              <Swiper
+                className="max-h-[282px]"
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                  waitForTransition: true,
+                  stopOnLastSlide: false,
+                }}
+                direction="vertical"
+                slidesPerView={4}
+                spaceBetween={5}
+                loop={true}
+                speed={800}
+                observer={true}
+                observeParents={true}
+                onSwiper={(swiper) => {
+                  swiper.autoplay.start();
+                }}
+              >
+                {newComments.map((comment) => (
+                  <SwiperSlide key={comment._id}>
+                    <div className="w-full h-full relative block">
+                      <Link className="comment-box relative">
+                        <div className="user-avatar">
+                          <img src={comment?.userId?.avatar} alt=""></img>
+                        </div>
+                        <div className="comment text-[12px] line-clamp-1">
+                          <span className="text-white-color font-medium">
+                            {comment?.userId?.username}{" "}
+                          </span>
+                          {comment?.content}
+                        </div>
+                        <div className="comment-movie inline-flex items-center gap-1  text-[12px] leading-[1.5] text-[#fff5]">
+                          <small>
+                            <i>
+                              <FaPlay size={8} className="text-primary-color" />
+                            </i>
+                          </small>
+                          <span className="line-clamp-1 capitalize">
+                            {comment?.movieName}
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
           </div>
         </div>
       </div>
