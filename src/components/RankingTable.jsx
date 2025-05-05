@@ -12,10 +12,10 @@ import {
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import axios from "axios";
 
 import { OpenContext } from "../contexts/OpenContext";
 import { CommentContext } from "../contexts/CommentContext";
-import axios from "axios";
 import { hotTypes } from "../assets/data/data";
 
 function RankingTable() {
@@ -201,11 +201,18 @@ function RankingTable() {
             <Swiper
               className="max-h-[282px]"
               modules={[Autoplay]}
-              autoplay={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+              }}
               direction="vertical"
               slidesPerView={4}
               spaceBetween={5}
               loop={true}
+              speed={800}
+              observer={true}
+              observeParents={true}
             >
               {newComments.map((comment) => (
                 <SwiperSlide key={comment._id}>
