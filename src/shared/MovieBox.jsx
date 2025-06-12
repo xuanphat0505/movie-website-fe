@@ -51,7 +51,6 @@ function MovieBox({ movie, type, removeButton, removeFavorite, playListName }) {
       await removeFromHistory(movie?.slug);
     }
   };
-  console.log(movie);
 
   return (
     <div className="w-full flex flex-col gap-3 relative ">

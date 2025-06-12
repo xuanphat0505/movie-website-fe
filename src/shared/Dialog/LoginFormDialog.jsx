@@ -76,8 +76,6 @@ function LoginFormDialog() {
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (credentialResponse) => {
-      console.log(credentialResponse);
-
       dispatch(loginStart());
       setGoogleLoading(true);
       try {

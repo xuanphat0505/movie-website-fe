@@ -70,6 +70,7 @@ function MovieUser() {
                 id="email"
                 value={data.email}
                 onChange={handleChange}
+                readOnly
               ></input>
             </div>
             <div className="form-group w-full mb-4">
