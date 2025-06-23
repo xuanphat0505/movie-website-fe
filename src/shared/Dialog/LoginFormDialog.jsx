@@ -1,7 +1,7 @@
 import { useContext, useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useGoogleLogin } from "@react-oauth/google";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaEye, FaEyeSlash } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
@@ -23,6 +23,7 @@ function LoginFormDialog() {
   const [reCapcha, setReCapcha] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
@@ -149,14 +150,23 @@ function LoginFormDialog() {
                   placeholder="Email"
                 ></input>
               </div>
-              <div className="input-box mb-6">
+              <div className="input-box mb-6 relative">
                 <input
                   onChange={handleChange}
                   value={formData.password}
                   id="password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Password"
                 ></input>
+                {formData.password.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2"
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                )}
               </div>
               <div>
                 <ReCAPTCHA

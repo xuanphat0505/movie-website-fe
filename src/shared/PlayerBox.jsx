@@ -24,6 +24,20 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
   const playerRef = useRef(null);
   const [lastTime, setLastTime] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
+  const [isDevToolsOpen, setIsDevToolsOpen] = useState(false);
+
+  // Function to detect DevTools
+  const detectDevTools = () => {
+    const threshold = 160;
+    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+
+    if (widthThreshold || heightThreshold) {
+      setIsDevToolsOpen(true);
+    } else {
+      setIsDevToolsOpen(false);
+    }
+  };
 
   const handleTimeUpdate = (state) => {
     const { playedSeconds } = state;
@@ -76,6 +90,7 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
     updateWatchHistory(movieData, currentTime, duration, episodeData);
   };
 
+  
   useEffect(() => {
     return () => {
       if (playerRef.current && movie && movie._id && movie.slug) {
@@ -100,12 +115,34 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
     setHasStarted(false);
   }, [episode]);
 
+  // Add event listeners for DevTools detection
+  useEffect(() => {
+    const handleResize = () => {
+      detectDevTools();
+    };
+
+    window.addEventListener("resize", handleResize);
+    detectDevTools(); // Initial check
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="player-ratio relative z-[105]">
       <div className="bg-[#08080a] overflow-hidden rounded-t-[.75rem] w-full max-md:rounded-none">
         {!episode || !episode.link_m3u8 ? (
           <div className="flex justify-center items-center min-h-[400px]">
             <Loading />
+          </div>
+        ) : isDevToolsOpen ? (
+          <div className="flex flex-col items-center justify-center min-h-[400px] text-white">
+            <img
+              src="https://res.cloudinary.com/djmeybzjk/image/upload/v1750084799/004_pgbodu.jpg"
+              alt="Error"
+              className="w-full h-full mb-4"
+            />
           </div>
         ) : (
           <ReactPlayer

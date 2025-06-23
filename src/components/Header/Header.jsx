@@ -271,7 +271,7 @@ function Header() {
         >
           {user && (
             <Link
-              to={"/user-profile/notification"}
+              to={"/user-profile/favorite"}
               className={`icon-search ${searchToggle ? "hidden" : ""} hover:text-white-color`}
             >
               <i>

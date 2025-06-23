@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useRef, useState } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -18,6 +18,8 @@ function RegisterFormDialog() {
   const dispatch = useDispatch();
   const { setFormDialog, formDialog } = useContext(OpenContext);
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -128,23 +130,41 @@ function RegisterFormDialog() {
                   value={formData.email}
                 ></input>
               </div>
-              <div className="input-box mb-2">
+              <div className="input-box mb-2 relative">
                 <input
                   onChange={handleChange}
                   id="password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Mật khẩu"
                   value={formData.password}
                 ></input>
+                {formData.password.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2"
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                )}
               </div>
-              <div className="input-box mb-6">
+              <div className="input-box mb-6 relative">
                 <input
                   onChange={handleChange}
                   id="confirmPassword"
-                  type="password"
+                  type={showConfirmPassword ? "text" : "password"}
                   placeholder="Nhập lại mật khẩu"
                   value={formData.confirmPassword}
                 ></input>
+                {formData.confirmPassword.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2"
+                  >
+                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                )}
               </div>
               <div>
                 <ReCAPTCHA
