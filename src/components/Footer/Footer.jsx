@@ -9,12 +9,23 @@ function Footer() {
       <div className="container w-full max-w-[1900px]">
         <div className="footer-element">
           <div className="footer-icon">
-            <img src={"https://res.cloudinary.com/djmeybzjk/image/upload/v1745254441/footer-icon_scgssa.svg"} alt=""></img>
+            <img
+              src={
+                "https://res.cloudinary.com/djmeybzjk/image/upload/v1745254441/footer-icon_scgssa.svg"
+              }
+              alt=""
+            ></img>
           </div>
           <div className="footer-left max-w-[750px] relative">
             <div className="footer-logo w-full inline-flex items-center gap-12 mb-8">
               <Link to={"/"}>
-                <img src={"https://res.cloudinary.com/djmeybzjk/image/upload/v1745742495/logo_szf2ca.svg"} alt="" className="h-[60px] w-auto"></img>
+                <img
+                  src={
+                    "https://res.cloudinary.com/djmeybzjk/image/upload/v1745742495/logo_szf2ca.svg"
+                  }
+                  alt=""
+                  className="h-[60px] w-auto"
+                ></img>
               </Link>
               <ul className="inline-flex flex-wrap justify-center gap-[.75rem] pl-12  border-l-[1px] border-border-color">
                 {footerSocials.map((social, index) => (
@@ -41,14 +52,15 @@ function Footer() {
               <Link className="mr-6 whitespace-nowrap">Liên hệ</Link>
             </ul>
             <div className="mb-2">
-              Rophim.net – Phim hay cả rổ - Trang xem phim online chất lượng cao
-              miễn phí Vietsub, thuyết minh, lồng tiếng full HD. Kho phim mới
-              khổng lồ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như
-              Việt Nam, Hàn Quốc, Trung Quốc, Thái Lan, Nhật Bản, Âu Mỹ… đa dạng
-              thể loại. Khám phá nền tảng phim trực tuyến hay nhất 2024 chất
-              lượng 4K!
+              Movie Website – Nền tảng xem phim trực tuyến chất lượng cao Cung
+              cấp trải nghiệm xem phim miễn phí với phụ đề Vietsub, thuyết minh,
+              và lồng tiếng đầy đủ. Kho phim phong phú từ phim lẻ, phim bộ, đến
+              phim chiếu rạp, đến từ nhiều quốc gia như Việt Nam, Hàn Quốc,
+              Trung Quốc, Thái Lan, Nhật Bản, Âu Mỹ… Tận hưởng chất lượng hình
+              ảnh sắc nét lên đến 4K cùng đa dạng thể loại hấp dẫn nhất năm
+              2025.
             </div>
-            <div>© 2024 RoPhim</div>
+            <div>© 2025 Movie Website</div>
           </div>
         </div>
       </div>
