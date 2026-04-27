@@ -124,7 +124,7 @@ function SideBarMovie({ movie }) {
             <div className="actor-item" key={index}>
               <Link className="actor-image">
                 <img
-                  src="https://res.cloudinary.com/djmeybzjk/image/upload/v1745254290/user-image_gdijb9.avif"
+                  src="https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776490861/user_rnttki.png"
                   alt=""
                 ></img>
               </Link>

@@ -10,6 +10,7 @@ import { RateContext } from "../contexts/RateContext";
 import Loader from "../shared/Loader";
 import Loading from "../shared/Loading/Loading";
 import CommentItem from "../shared/CommentItem";
+import commentIcon from "../assets/images/comment.svg";
 
 function CommentBox({ type = 1, movieId, movieName, movieThumb, replay = true }) {
   const { setFormDialog } = useContext(OpenContext);
@@ -200,7 +201,7 @@ function CommentBox({ type = 1, movieId, movieName, movieThumb, replay = true })
       ) : (
         <div className="v-notice">
           <div className="v-notice-icon">
-            <img src={"https://res.cloudinary.com/djmeybzjk/image/upload/v1745254865/comment_c6vmkk.svg"} alt="" />
+            <img src={commentIcon} alt="" />
           </div>
           <p className="mb-0 text-text-base">
             Chưa có {activeTab === "comment" ? "bình luận" : "đánh giá"} nào

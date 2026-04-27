@@ -55,7 +55,7 @@ function PlayMovie() {
         // Nếu continueWatching là true, tìm thời điểm đã xem trong lịch sử
         if (continueWatching === "true" && watchHistory.length > 0) {
           const historyItem = watchHistory.find(
-            (item) => item.slug === movieDetail.slug
+            (item) => item.slug === movieDetail.slug,
           );
 
           if (historyItem) {
@@ -92,7 +92,7 @@ function PlayMovie() {
     // Chỉ xử lý watchHistory nếu có
     if (watchHistory.length > 0) {
       const historyItem = watchHistory.find(
-        (item) => item.slug === movieDetail.slug
+        (item) => item.slug === movieDetail.slug,
       );
 
       if (historyItem && historyItem.episode && historyItem.episode.name) {
@@ -141,7 +141,7 @@ function PlayMovie() {
         if (movieDetail?.category?.length > 0) {
           const res = await axios.get(
             `https://phimapi.com/v1/api/the-loai/${movieDetail.category[0].slug}`,
-            { page: 1 }
+            { page: 1 },
           );
           const result = res.data;
           setSuggestMovie(result.data.items);
@@ -351,7 +351,7 @@ function PlayMovie() {
                     <Link className="actor-image">
                       <img
                         src={
-                          "https://res.cloudinary.com/djmeybzjk/image/upload/v1745254290/user-image_gdijb9.avif"
+                          "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776490861/user_rnttki.png"
                         }
                         alt=""
                       ></img>

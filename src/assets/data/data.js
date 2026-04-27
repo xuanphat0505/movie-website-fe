@@ -1,6 +1,13 @@
 import { FaHeart, FaPlus, FaUser, FaRightFromBracket } from "react-icons/fa6";
 import { FaHistory } from "react-icons/fa";
 
+import telegramIcon from '../images/telegram-icon.svg'
+import xIcon from '../images/x-icon.svg'
+import facebookIcon from '../images/facebook-icon.svg'
+import tiktokIcon from '../images/tiktok-icon.svg'
+import instagramIcon from '../images/instagram-icon.svg'
+import youtubeIcon from '../images/youtube-icon.svg'
+import threadsIcon from '../images/threads-icon.svg'
 
 export const subMenu = [
   {
@@ -65,25 +72,25 @@ export const typeList = [
 
 export const footerSocials = [
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253296/telegram-icon_whex9w.svg",
+    icon: telegramIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253304/x-icon_alim22.svg",
+    icon: xIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253352/facebook-icon_hrfqyq.svg",
+    icon: facebookIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253297/tiktok-icon_vug9bm.svg",
+    icon: tiktokIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253302/youtube-icon_l2u4xv.svg",
+    icon: youtubeIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253299/threads-icon_bnbdhh.svg",
+    icon: threadsIcon,
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253354/instagram-icon_fea3fr.svg",
+    icon: instagramIcon,
   },
 ];
 
@@ -483,49 +490,43 @@ export const userTab = [
 
 export const avatarList = [
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/01_odv3vg.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/09_d4h446.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/02_lyxfhg.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/14_xgyuph.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/03_qiwlk8.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/13_bmvdl8.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/04_qk9eke.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/11_vqp73i.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/05_k1t4nk.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/08_pes7ef.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/06_g2ke5j.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/07_thtsey.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/07_oseoch.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/04_mi7dun.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252587/08_c7bgum.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/06_mujapd.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252589/09_cokzwf.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/05_iietnr.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252591/10_dbtkau.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/03_b3sqhu.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252592/11_i12gux.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/01_jao0vk.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252592/12_hx23fo.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/10_j5ebhr.jpg",
   },
   {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252593/13_chpylg.jpg",
-  },
-  {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252593/14_jhfctu.jpg",
-  },
-  {
-    avatar: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745252594/15_yym3nq.jpg",
+    avatar: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776487854/02_dvr1cb.jpg",
   },
 ];
 

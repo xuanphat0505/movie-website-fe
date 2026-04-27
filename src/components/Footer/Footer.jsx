@@ -8,20 +8,12 @@ function Footer() {
     <footer className="w-full h-auto bg-footer-bg">
       <div className="container w-full max-w-[1900px]">
         <div className="footer-element">
-          <div className="footer-icon">
-            <img
-              src={
-                "https://res.cloudinary.com/djmeybzjk/image/upload/v1745254441/footer-icon_scgssa.svg"
-              }
-              alt=""
-            ></img>
-          </div>
           <div className="footer-left max-w-[750px] relative">
             <div className="footer-logo w-full inline-flex items-center gap-12 mb-8">
               <Link to={"/"}>
                 <img
                   src={
-                    "https://res.cloudinary.com/djmeybzjk/image/upload/v1745742495/logo_szf2ca.svg"
+                    "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1777103066/clipart1905570_dnp4wo.png"
                   }
                   alt=""
                   className="h-[60px] w-auto"

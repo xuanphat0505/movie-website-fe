@@ -32,13 +32,13 @@ function MovieDetail() {
   const [suggestMovie, setSuggestMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { watchHistory } = useContext(WatchHistoryContext);
-  
+
   // Reference to the comments section
   const commentRef = useRef(null);
-  
+
   const scrollToComments = () => {
     if (commentRef.current) {
-      commentRef.current.scrollIntoView({ behavior: 'smooth' });
+      commentRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -55,7 +55,7 @@ function MovieDetail() {
     // Nếu đang chọn tập 1 hoặc tập nào đó đã xem dở
     if (watchHistory && watchHistory.length > 0 && movieDetail?.slug) {
       const historyItem = watchHistory.find(
-        (item) => item.slug === movieDetail.slug
+        (item) => item.slug === movieDetail.slug,
       );
 
       // Nếu phim này có trong lịch sử và đang chọn tập giống như trong lịch sử
@@ -106,13 +106,13 @@ function MovieDetail() {
         if (movieDetail?.category?.length > 0) {
           const res = await axios.get(
             `https://phimapi.com/v1/api/the-loai/${movieDetail.category[0].slug}`,
-            { page: 1 }
+            { page: 1 },
           );
           const result = res.data;
 
           // Filter out the current movie
           const filteredMovies = result.data.items.filter(
-            (movie) => movie.slug !== movieDetail.slug
+            (movie) => movie.slug !== movieDetail.slug,
           );
 
           // Ensure we have at least 10 unique movies
@@ -121,7 +121,7 @@ function MovieDetail() {
             for (let i = 1; i < movieDetail.category.length; i++) {
               const additionalRes = await axios.get(
                 `https://phimapi.com/v1/api/the-loai/${movieDetail.category[i].slug}`,
-                { page: 1 }
+                { page: 1 },
               );
               const additionalResult = additionalRes.data;
 
@@ -130,8 +130,8 @@ function MovieDetail() {
                   (movie) =>
                     movie.slug !== movieDetail.slug &&
                     !filteredMovies.some(
-                      (filteredMovie) => filteredMovie.slug === movie.slug
-                    )
+                      (filteredMovie) => filteredMovie.slug === movie.slug,
+                    ),
                 );
 
               // Add unique movies to the filteredMovies array
@@ -360,7 +360,10 @@ function MovieDetail() {
                           >
                             <div className="w-full flex flex-col items-center gap-0 text-center">
                               <Link className="v-actor">
-                                <img src="https://res.cloudinary.com/djmeybzjk/image/upload/v1745254290/user-image_gdijb9.avif" alt=""></img>
+                                <img
+                                  src="https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776490861/user_rnttki.png"
+                                  alt=""
+                                ></img>
                               </Link>
                               <div className="relative py-3 px-2 mt-[-40px] z-[2]">
                                 <h4 className="mb-[.4rem] text-white-color text-[1em] font-normal leading-[1.5]">

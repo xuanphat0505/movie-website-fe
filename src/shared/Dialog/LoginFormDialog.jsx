@@ -198,8 +198,7 @@ function LoginFormDialog() {
                   ) : (
                     <>
                       <img
-                        src="https://res.cloudinary.com/djmeybzjk/image/upload/v1745254438/google-icon_ax7kfe.png"
-                        alt="Google"
+                        src="https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1777103634/Google__G__logo_g3kiw5.svg"
                         className="w-6 h-6"
                       />
                       Đăng nhập với Google

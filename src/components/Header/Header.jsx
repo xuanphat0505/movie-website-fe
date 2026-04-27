@@ -201,7 +201,7 @@ function Header() {
             </div>
             <div className="w-auto h-[36px] ml-4">
               <Link to={"/"} className="inline-block w-full h-full">
-                <img src={"https://res.cloudinary.com/djmeybzjk/image/upload/v1745742495/logo_szf2ca.svg"} alt="" className="w-full h-full"></img>
+                <img src={"https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1777103066/clipart1905570_dnp4wo.png"} alt="" className="w-full h-full"></img>
               </Link>
             </div>
           </div>
