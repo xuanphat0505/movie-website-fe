@@ -439,23 +439,23 @@ export const dialogIcons = [
 
 export const rateIcons = [
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253187/rate-1_om7rph.webp",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1781773763/rate-1_wmfpmi.webp",
     text: "dở tệ",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253188/rate-2_elch9b.webp",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1781773759/rate-2_iogean.webp",
     text: "phim chán",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253189/rate-3_ddkkuw.webp",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1781773759/rate-3_qbmtry.webp",
     text: "khá ổn",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253191/rate-5_xdxygb.webp",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1781773760/rate-4_tcndko.webp",
     text: "phim hay",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253192/rate-4_exgqzh.webp",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1781773760/rate-5_bqr9sh.webp",
     text: "quá tuyệt",
   },
 ];

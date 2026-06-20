@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown, FaCircleCheck } from "react-icons/fa6";
 
 import axios from "axios";
+import ClipLoader from "react-spinners/ClipLoader";
 import TopMovieBox from "../TopMovieBox";
 
 import "./SideBarMovie.css";
@@ -64,6 +65,11 @@ function SideBarMovie({ movie }) {
         <div className={`detail-more ${toggleDetail ? "block" : "hidden"}`}>
           <div>
             <ul className="list mb-3">
+              {movie?.tmdb?.vote_average !== undefined && (
+                <div className="tag-imdb">
+                  <span>{movie.tmdb.vote_average.toFixed(1)}</span>
+                </div>
+              )}
               <div className="tag ">
                 <span>{movie.year}</span>
               </div>
@@ -90,6 +96,32 @@ function SideBarMovie({ movie }) {
             </div>
             <div className="">{movie.content}</div>
           </div>
+
+          {/* status badge */}
+          {(movie?.status === "completed" || movie?.status === "ongoing") && (
+            <div className={`status ${movie.status} mb-4`}>
+              <div className="line-center small">
+                {movie.status === "ongoing" ? (
+                  <ClipLoader
+                    color="currentColor"
+                    size={12}
+                    speedMultiplier={1}
+                  />
+                ) : (
+                  <FaCircleCheck
+                    className="flex-shrink-0 w-[14px]"
+                    style={{ color: "#22cb4c" }}
+                  />
+                )}
+                <span>
+                  {movie.episode_current === "Full"
+                    ? `Đã hoàn thành: ${movie.episode_current}`
+                    : `Đang cập nhật: ${movie.episode_current}/${movie.episode_total} `}
+                </span>
+              </div>
+            </div>
+          )}
+
           <div className="w-full flex items-start gap-[.6rem] mb-[1.2rem]">
             <div className="block text-white-color font-medium whitespace-nowrap">
               Quốc gia:

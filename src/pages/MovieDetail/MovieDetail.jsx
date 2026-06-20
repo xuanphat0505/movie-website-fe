@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaStar } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 import axios from "axios";
 
@@ -16,9 +16,9 @@ import RateDialog from "../../shared/Dialog/RateDialog";
 import Loading from "../../shared/Loading/Loading";
 import PlayListPopUp from "../../shared/PlayListPopUp";
 import { WatchHistoryContext } from "../../contexts/WatchHistoryContext";
+import { RateContext } from "../../contexts/RateContext";
 
 import "./MovieDetail.css";
-import { RateContext } from "../../contexts/RateContext";
 function MovieDetail() {
   const { id } = useParams();
 
@@ -298,7 +298,7 @@ function MovieDetail() {
                   className="rating-button"
                   onClick={() => setOpenRateDialog(true)}
                 >
-                  <div className="rating-icon"></div>
+                  <FaStar className="text-[#ffd875] w-[22px]" />
                   <span className="point">
                     {movieRatings[movieDetail._id]?.stats?.avgRate
                       ? (
