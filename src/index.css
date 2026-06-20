@@ -300,14 +300,14 @@ body.base-load {
     background-color: #ffffff30;
     border-radius: 50%;
   }
-
+/* 
   .rating-icon {
     width: 24px;
     height: 24px;
     background-image: url("https://res.cloudinary.com/djmeybzjk/image/upload/v1745254367/rating-icon_bmq8ho.svg");
     background-size: cover;
     background-position: center;
-  }
+  } */
   .rating-button .point {
     font-weight: 700;
     font-size: 16px;

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
 import axios from "axios";
 
 import { OpenContext } from "../../contexts/OpenContext";
@@ -175,7 +176,7 @@ function PlayMovie() {
       <ShareDialog />
       <RateDialog movieId={movieDetail._id} />
       <main className="w-full pt-[5rem] pb-[10rem]">
-        <div className="player-container relative w-full max-w-[1640px] px-[20px]">
+        <div className="player-container relative w-full px-[20px]">
           <div className="inline-flex items-center gap-2 w-full px-[40px] mb-[1.5rem] max-sm:mb-0 max-sm:mt-4 max-sm:px-[16px]">
             <Link
               to={`/movie/${id}`}
@@ -332,7 +333,7 @@ function PlayMovie() {
                 className="rating-button"
                 onClick={() => setOpenRateDialog(true)}
               >
-                <div className="rating-icon"></div>
+                <FaStar className="text-[#ffd875] w-[22px]" />
                 <span className="point">
                   {movieRatings[movieDetail._id]?.stats?.avgRate
                     ? (

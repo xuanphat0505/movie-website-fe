@@ -6,6 +6,32 @@
   width: 440px;
   border-radius: 1.25rem 3rem 1.25rem 1.25rem;
 }
+
+.movie-sidebar .side-info .detail-more .status {
+  display: inline-flex;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.movie-sidebar .side-info .detail-more .status.completed {
+  background-color: #22cb4c1a;
+  color: #22cb4c;
+}
+.movie-sidebar .side-info .detail-more .status.ongoing {
+  background-color: #ff83001a;
+  color: #ff8300;
+}
+.movie-sidebar .side-info .detail-more .status .line-center {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 2rem;
+}
+.movie-sidebar .side-info .detail-more .status .line-center.small {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .top-movie + .top-movie {
   margin-top: 1rem;
 }
@@ -107,6 +133,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0.75rem;
   }
+
   .movie-sidebar .side-actor,
   .movie-sidebar .side-top {
     display: none;

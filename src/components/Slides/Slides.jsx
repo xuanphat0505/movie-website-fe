@@ -26,7 +26,7 @@ function Slides({ movies }) {
 
   if (isLoading) {
     return (
-      <div className="w-full max-xxl:h-[760px] max-xl:h-[600px] max-md:h-[400px] max-sm:h-[350px] max-xsm:h-[300px] mb-[30px] flex items-center justify-center">
+      <div className="w-full h-[760px] max-xxl:h-[760px] max-xl:h-[600px] max-md:h-[400px] max-sm:h-[350px] max-xsm:h-[300px] mb-[30px] flex items-center justify-center">
         <Loading height="100%" />
       </div>
     );
@@ -45,7 +45,7 @@ function Slides({ movies }) {
           fadeEffect={{ crossFade: true }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           initialSlide={0}
-          className="w-full max-xxl:h-[760px] max-xl:h-[600px] max-md:h-[400px] max-sm:h-[350px] max-xsm:h-[300px] mb-[30px]"
+          className="w-full h-[760px] max-xxl:h-[760px] max-xl:h-[600px] max-md:h-[400px] max-sm:h-[350px] max-xsm:h-[300px] mb-[30px]"
         >
           {movies?.map((slide, index) => (
             <SwiperSlide key={index}>

@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useContext, useState } from "react";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaStar } from "react-icons/fa";
 
 import { OpenContext } from "../../contexts/OpenContext";
 import { rateIcons } from "../../assets/data/data";
@@ -15,7 +15,7 @@ import { toastError, toastSuccess } from "../Toastify";
 function RateDialog({ movieId }) {
   const user = useSelector((state) => state.auth.user);
   const { openRateDialog, setOpenRateDialog } = useContext(OpenContext);
-  const { rateStats, getRates, movieRatings } = useContext(RateContext);
+  const { getRates, movieRatings } = useContext(RateContext);
   const [rateLoading, setRateLoading] = useState(false);
   const [rateData, setRateData] = useState({
     movieId: movieId,
@@ -106,7 +106,7 @@ function RateDialog({ movieId }) {
           </div>
           <div className="modal-body mb-12">
             <div className="flex items-center justify-center w-full gap-2 mb-6">
-              <div className="rating-icon"></div>
+              <FaStar className="text-[#ffd875] w-[14px]" />
               <strong className="text-white-color">
                 {(movieRatings[movieId]?.stats?.avgRate * 2).toFixed(1)}
               </strong>

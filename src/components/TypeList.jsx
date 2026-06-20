@@ -14,7 +14,7 @@ function TypeList() {
         ))}
         {typeList.length > 6 && (
           <Link to={"/types"} className="type-card more-topic">
-            <div className="intro flex justify-center items-center w-full h-fullr leading-[1.8] font-bold text-center">
+            <div className="intro flex justify-center items-center w-full h-full leading-[1.8] font-bold text-center">
               <div className="heading-md mb-0">
                 +{typeList.length - 6} chủ đề
               </div>

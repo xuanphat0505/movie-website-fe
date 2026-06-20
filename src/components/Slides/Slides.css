@@ -87,6 +87,7 @@
   position: absolute !important;
   width: 450px;
   bottom: 212px;
+  right: 50px;
 }
 .thumbs-wrapper .thumbs-slide {
   position: relative;
