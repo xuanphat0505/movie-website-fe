@@ -64,7 +64,7 @@ export default function MaintenancePage() {
             Hotline:{" "}
             <a
               href={`tel:${config.hotline}`}
-              className="text-[#ff8300] font-bold hover:underline"
+              className="text-[#ff8300] font-bold hover:!underline"
             >
               {config.hotline}
             </a>
