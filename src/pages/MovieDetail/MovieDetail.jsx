@@ -354,27 +354,17 @@ function MovieDetail() {
                       <h3 className="heading-md box-header">Diễn viên</h3>
                       <div className="detail-actors grid ">
                         {movieDetail?.actor?.map((actor, index) => (
-                          <div
-                            className="item-actor relative rounded-[.6rem] overflow-hidden"
-                            key={index}
-                          >
-                            <div className="w-full flex flex-col items-center gap-0 text-center">
-                              <Link className="v-actor">
-                                <img
-                                  src="https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776490861/user_rnttki.png"
-                                  alt=""
-                                ></img>
-                              </Link>
-                              <div className="relative py-3 px-2 mt-[-40px] z-[2]">
-                                <h4 className="mb-[.4rem] text-white-color text-[1em] font-normal leading-[1.5]">
-                                  <Link className="capitalize">{actor}</Link>
-                                </h4>
-                                <div className="text-[.9em]">
-                                  <span className="capitalize text-[#f0adb1]">
-                                    {actor}
-                                  </span>
-                                </div>
-                              </div>
+                          <div className="actor-item" key={index}>
+                            <Link className="actor-image">
+                              <img
+                                src="https://res.cloudinary.com/drngsxvb3/image/upload/q_auto/f_auto/v1776490861/user_rnttki.png"
+                                alt={actor}
+                              />
+                            </Link>
+                            <div>
+                              <h4 className="line-clamp-2">
+                                <Link className="capitalize">{actor}</Link>
+                              </h4>
                             </div>
                           </div>
                         ))}
