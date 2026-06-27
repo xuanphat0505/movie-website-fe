@@ -412,27 +412,27 @@ export const filterCategory = [
 
 export const dialogIcons = [
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253352/facebook-icon_hrfqyq.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545254/facebook_vcrpdr.svg",
     color: "#4267B2",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253304/x-icon_alim22.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545270/twitter_d3ax4p.svg",
     color: "#000000",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253296/telegram-icon_whex9w.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545270/telegram_tesfs9.svg",
     color: "#0088cc",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253291/reddit_mjjxir.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545264/reddit_qqxafh.svg",
     color: "#ff4500",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253422/messenger_xgo6bn.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545258/messenger_krmzfd.svg",
     color: "#448AFF",
   },
   {
-    icon: "https://res.cloudinary.com/djmeybzjk/image/upload/v1745253293/sharethis_bcbqgu.svg",
+    icon: "https://res.cloudinary.com/drngsxvb3/image/upload/v1782545265/sharethis_fezysq.svg",
     color: "#95D03A",
   },
 ];
