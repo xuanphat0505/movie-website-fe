@@ -16,6 +16,7 @@ function OpenProvider({ children }) {
   const [openEditPlayListDialog, setOpenEditPlayListDialog] = useState(false);
   const [openAvatarDialog, setOpenAvatarDialog] = useState(false);
   const [openRankTypeDialog, setOpenRankTypeDialog] = useState(false);
+  const [openReportDialog, setOpenReportDialog] = useState(false);
   const [formDialog, setFormDialog] = useState("");
   const [selectedPlayList, setSelectedPlayList] = useState(null);
   const [movies, setMovies] = useState([]);
@@ -50,6 +51,7 @@ function OpenProvider({ children }) {
         formDialog,
         selectedPlayList,
         openRankTypeDialog,
+        openReportDialog,
         setToggle,
         setFormDialog,
         setOpenShareDialog,
@@ -61,6 +63,7 @@ function OpenProvider({ children }) {
         setOpenEditPlayListDialog,
         setOpenAvatarDialog,
         setOpenRankTypeDialog,
+        setOpenReportDialog,
         handleOpenRankMovieDialog,
         handleOpenRankTypeDialog,
       }}

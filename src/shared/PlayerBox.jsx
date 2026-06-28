@@ -9,6 +9,7 @@ import { FavoritesContext } from "../contexts/FavoritesContext";
 import { WatchHistoryContext } from "../contexts/WatchHistoryContext";
 import Loading from "../shared/Loading/Loading";
 import PlayListPopUp from "./PlayListPopUp";
+import ReportDialog from "./Dialog/ReportDialog";
 
 function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
@@ -17,8 +18,10 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
     setToggle,
     openShareDialog,
     openPlayListPopUp,
+    openReportDialog,
     setOpenShareDialog,
     setOpenPlayListPopUp,
+    setOpenReportDialog,
   } = useContext(OpenContext);
   const { updateWatchHistory } = useContext(WatchHistoryContext);
   const playerRef = useRef(null);
@@ -245,7 +248,10 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
             <span>Chia sẻ</span>
           </div>
           <div className="flex-grow-[1]"></div>
-          <div className={`item ${toggle ? "visible" : ""}`}>
+          <div
+            className={`item ${toggle ? "visible" : ""}`}
+            onClick={() => setOpenReportDialog((prev) => !prev)}
+          >
             <i>
               <FaFlag />
             </i>
@@ -253,6 +259,7 @@ function PlayerBox({ episode, movie, startTime = 0, userSelected = false }) {
           </div>
         </div>
       </div>
+      <ReportDialog movie={movie} episode={episode} />
     </div>
   );
 }
